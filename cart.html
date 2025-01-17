@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content:center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .cont {
+            background-color: #333;
+            width: 1100px;
+            height: 350px;
+            padding: 10px;
+            overflow: scroll;
+            margin-right: 200px; 
+            margin-top: 100px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .img1 {
+            width: 150px;
+            height: 90px;
+            margin-right: 20px;
+        }
+
+        .details {
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+
+        .details p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: flex-end;
+            transform: translateY(-120%);
+            font-size: 20px;
+            margin:5px 90px 0 0;
+        }
+
+        .money {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .money .pa {
+            margin: 0;
+        }
+
+        .quantity-selector {
+            display: inline-flex;
+            align-items: center;
+            background-color: #333;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .quantity-selector button {
+            background-color: transparent;
+            border: none;
+            color: #ccc;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .quantity-selector .quantity {
+            padding: 0 10px;
+            color: red;
+            font-weight: bold;
+            font-size: 16px;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 30px;
+            height: 30px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 0 0 0 190px;
+            width: 400px;
+        }
+        
+        aside {
+            margin-top: 100px;
+            width: 25%; 
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        aside p {
+            margin: 10px 0;
+            font-size: 16px; 
+            display: flex;
+            justify-content: space-between;
+        }
+
+        aside hr {
+            border: 0;
+            width: 200px;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+
+        aside h2 {
+            margin-bottom: 20px;
+        }
+
+        aside h3 {
+            margin: 10px 0;
+            font-size: 16px; 
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <section class="cont">
+            <div class="container">
+                <img class="img1" src="/images/jbl660nc-1.png" alt="jbl headphones">
+                <div class="details">
+                    <p>JBL Live 660NC Wireless Over-Ear NC Headphones</p>
+                    <div class="icon">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </div>
+                    <div class="money">
+                        <p class="pa"><strong>₹9,999</strong></p>
+                        <p class="pa"><del>₹14,999</del></p>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="decrement">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment">+</button>
+                    </div>
+                </div>
+            </div>
+            <hr><br><br>
+            <div class="container">
+                <img class="img1" src="../images/boat518-1.png" alt="boat headphones">
+                <div class="details">
+                    <p>Boat Rockerz 518 On-Ear Wireless Headphones</p>
+                    <div class="icon">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </div>
+                    <div class="money">
+                        <p class="pa"><strong>₹1,299</strong></p>
+                        <p class="pa"><del>₹3,990</del></p>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="decrement">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment">+</button>
+                    </div>
+                </div>
+            </div>
+            <hr><br><br>
+            <div class="container">
+                <img class="img1" src="../images/boat131-3.png" alt="boat headphones">
+                <div class="details">
+                    <p>Boat Airdopes 131 Wireless In-Ear Headphones</p>
+                    <div class="icon">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </div>
+                    <div class="money">
+                        <p class="pa"><strong>₹1,099</strong></p>
+                        <p class="pa"><del>₹2,990</del></p>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="decrement">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment">+</button>
+                    </div>
+                </div>
+            </div>
+            <hr><br><br>
+            <div class="container">
+                <img class="img1" src="../images/boat110-1.png" alt="sony headphones">
+                <div class="details">
+                    <p>Boat Baseheads 110 in-ear wired Earphones</p>
+                    <div class="icon">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </div>
+                    <div class="money">
+                        <p class="pa"><strong>₹449</strong></p>
+                        <p class="pa"><del>₹999</del></p>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="decrement">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment">+</button>
+                    </div>
+                </div>
+            </div>
+            <hr><br><br>
+        </section>  
+        <aside>
+            <h2>Order Summary (4 items)</h2>
+            <p>Original Price: <span>₹22,978</span></p>
+            <p>Discount: <span>₹10,132</span></p>
+            <p>Delivery: <span>Free</span></p>
+            <hr>
+            <h3>Total Price: <span>₹12,846</span></h3>
+            <button class="btn" type="button">Checkout</button>
+        </aside>
+    </div>
+</body>
+</html>

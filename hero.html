@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Rating</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+        }
+        section {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+        }
+        .container .img1{
+            border: 1px solid rgb(132, 122, 141);
+            width: 150px;
+            height: 120px;
+            display: flex;
+            justify-content: flex-start;
+            margin:20px 0 50px 70px;
+            padding: 5px;
+        }
+        .container .img1:hover {
+            border: 1px solid white;
+            transform: scale(1.07);
+        }
+        .contt .img2 {
+            width: 100%;
+            max-width: 900px;
+            height: 700px;
+            margin-right: 500px;
+        }
+        .product-info {
+            padding: 15px;
+            width: 600px;
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+        .product-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .product-subtitle {
+            font-size: 20px;
+            color: #ccc;
+            margin: 5px 0 10px 0;
+        }
+        .ratings {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .stars {
+            color: red;
+        }
+        .review-count {
+            color: #ccc;
+            font-size: 15px;
+        }
+        .money {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+        width: 110px;
+        font-size: 30px;
+        gap: 10px;
+    }
+
+    .cls{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cls .pasf{
+        font-size: 20px;
+        margin-top: 0x;
+        color: green;
+    }
+
+    .cls .button{
+        border: 1px solid white;
+        background-color: rgb(145, 169, 37);
+        height: 30px;
+    }
+    .cls .button:hover{
+         background-color: green;
+        transform: scale(1.06);
+    }
+    div .pan{
+        font-size: 20px;
+    }
+    form .intp{
+        font-size: 0.9rem;
+        height: 30px;
+        background-color: rgb(52, 48, 48);
+    }
+    .intpa{
+        background-color:darkgreen;
+        font-size: 20px;
+    }
+    .intpa:hover{
+       background-color: orangered;
+    } 
+    .val {
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+    gap: 50px; 
+    margin-top: 20px; 
+}
+
+.val button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: darkgray;
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.val button:hover, .val button.active {
+    background-color: orangered; 
+    color: white; 
+}
+
+.nam {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-right: 400px;
+    height: 100px;
+}
+
+.nam .man {
+    font-size: 20px;
+}
+.main .heads{
+    text-align: center;
+    margin-top: 300px;
+    font-size: 30px;
+}
+.product-grid {
+        display: inline;
+        border: 1px solid white;
+        display: inline-block;
+        padding: 5px;
+        margin: 80px 0 0 110px;
+        text-align: left;
+        width: 320px;
+        height: 480px;
+   }
+    .product-grid img {
+        max-width: 70%;
+        height: 40%;
+    }
+    .brand {
+        text-align: left;
+    }
+
+    .dis {
+        text-align: left; 
+    }
+
+    .money {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        width: 110px;
+    }
+    .card1 {
+        background-color: red;
+        width: 250px;
+        height: 30px;
+    }
+    .stars{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .advn{
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+    }
+        .advantages-section {
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .advantages-section h2 {
+            margin-bottom: 40px;
+            font-size: 24px;
+            color: #a1a1a1;
+        }
+
+        .advantages-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .advantage-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1000px;
+        }
+
+        .advantage-item i {
+            width: 50px;
+            height: 5%;
+            margin-bottom: 15px;
+            color: #c0392b;
+        }
+
+        .advantage-item fail {
+            font-size: 16px;
+            margin: 0;
+            color: #fff;
+        }
+
+        .advantage-item pass {
+            font-size: 14px;
+            color: #a1a1a1
+        }
+    .down{
+    font-family: Arial, sans-serif;
+    border: #e53935;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: black;
+    color: #ddd;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h2, .footer-section h4 {
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.subscribe-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #c0392b;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+}
+.footer-socials a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+        <img class="img1" src="../images/sonyXb910n-1.png" alt="sony headphones">
+        <img class="img1" src="../images/sonyXb910n-2.png" alt="sony headphones">
+        <img class="img1" src="../images/sonyXb910n-3.png" alt="sony headphones">
+        <img class="img1" src="../images/sonyXb910n-4.png" alt="sony headphones">
+    </div>
+    <div class="contt">
+        <img class="img2" src="../images/sonyXb910n-1.png" alt="sony headphones">
+    </div>
+    <div class="product-info">
+        <p class="product-title">Sony WH-XB910N</p>
+        <p class="product-subtitle">wireless over-Ear Headphones</p>
+        <div class="ratings">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span class="review-count">| 1034 Ratings</span><br><br>
+        </div>
+             <hr>
+             <div class="sub1">
+             <div class="money">
+                <p class="pa"><strong>₹13,489</strong>
+                </p><p class="pa"><del>₹19,990</del></p>
+            </div>
+            <div class="cls">
+            <p class="pasf">You save: ₹5000 (33%)</p>
+             <input class="button" type="button" value="√ In Stock" >
+            </div>
+            <p class="pasf">[inclusive of all taxes]</p>
+            </div>
+            <hr>
+            <div>
+                <p class="pan">Offers and Discounts</p>
+                 <form>
+                    <input class="intp" type="button" value="No Cost EMI On Credit Card">
+                    <input class="intp" type="button" value="Pay Later & Avail Cashback">
+                 </form>
+            </div>
+            <hr><br>
+           <input class="intpa" type="submit" value="Add to cart">
+        </div>
+</section>
+<div class="val">
+    <button class="active">Specifications</button>
+    <button>Overview</button>
+    <button>Reviews</button>
+</div><br><br>
+
+<div class="nam">
+    <div class="man">
+        <p>Brand</p>
+        <p>Model</p>
+        <p>Generic Name</p>
+        <p>Headphone Type</p>
+        <p>Connectivity</p>
+        <p>Microphone</p>
+    </div>
+    <div class="man">
+        <p>JBL</p>
+        <p>JBL Live 660NC</p>
+        <p>Headphones</p>
+        <p>Over Ear</p>
+        <p>Wireless</p>
+        <p>Yes</p>
+    </div>
+</div>
+<div class="main">
+    <p class="heads">Related Products</p>
+<div class="product-grid">
+    <img class="item1" src="../images/sony1000xm4-1.png" alt="sony blutooth">
+<div class="stars">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+</div>
+    <h4 class="brand">Sony WF-1000XM4</h4>
+    <p class="dis">wireless in-Ear NC Headphones</p>
+    <p>--------------------------------------------------------</p>
+    <div class="money">
+    <p class="pa"><strong>₹19,990</strong>
+    </p><p class="pa"><del>₹24,990</del></p>
+    </div>
+    <p><button class="card1">Add to cart</button></p>
+</div>   
+<div class="product-grid">
+    <img class="item1" src="../images/sonyXb910n-1.png" alt="sony headphones">
+<div class="stars">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+</div>
+    <h4 class="brand">Sony WH-XB910N</h4>
+    <p class="dis">wireless over-Ear Headphones</p>
+    <p>--------------------------------------------------------</p>
+    <div class="money">
+    <p class="pa"><strong>₹13,489</strong>
+    </p><p class="pa"><del>₹19,990</del></p>
+    </div>
+    <p><button class="card1">Add to cart</button></p>
+</div> 
+<div class="product-grid">
+    <img class="item1" src="../images/sonyXb400-1.png" alt="sony headphones">
+<div class="stars">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+</div>
+    <h4 class="brand">Sony WH-Xb400N</h4>
+    <p class="dis">In-Ear wireless Neckbands</p>
+    <p>--------------------------------------------------------</p>
+    <div class="money">
+    <p class="pa"><strong>₹1,099</strong>
+    </p><p class="pa"><del>₹2,999</del></p>
+    </div>
+    <p><button class="card1">Add to cart</button></p>
+</div> 
+</div>
+<div class="advantages-section">
+    <h2>Our Advantages</h2>
+    <div class="advantages-container">
+        <div class="advantage-item">
+            <i class="fas fa-truck"></i>
+            <p class="fail">Express Delivery</p>
+            <span class="pass">Ships in 24 Hours</span>
+        </div>
+        <div class="advantage-item">
+            <i class="fas fa-shield-alt"></i>
+            <p class="fail">Brand Warranty</p>
+            <span class="pass">100% Original products</span>
+        </div>
+        <div class="advantage-item">
+            <i class="fas fa-tag"></i>
+            <p class="fail">Exciting Deals</p>
+            <span class="pass">On all prepaid orders</span>
+        </div>
+        <div class="advantage-item">
+            <i class="fas fa-lock"></i>
+            <p class="fail">Secure Payments</p>
+            <span class="pass">SSL / Secure certificate</span>
+        </div>
+    </div>
+</div>    
+<div class="down">
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Tech-Shop</h2>
+                <p>Subscribe to our Email alerts to receive early discount offers, and new products info.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Email Address*" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Cancel Order</a></li>
+                    <li><a href="#">Return Order</a></li>
+                    <li><a href="#">Warranty Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Service Centres</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2024 | All Rights Reserved. Built by <strong>PRAJWAL V M</strong></p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
